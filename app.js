@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/teams');
 const { sequelize } = require('./models');
+const Team  = require("./models/team")
+console.log("TEAM", Team)
 
 var app = express();
 
@@ -40,5 +42,8 @@ app.use(function(err, req, res, next) {
 
 //Database Init
 sequelize.sync();
+
+const red = await Team.create({ name: "blue" });
+
 
 module.exports = app;

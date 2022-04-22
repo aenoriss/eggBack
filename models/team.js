@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     points: DataTypes.INTEGER
   }, {
     sequelize,
+    tableName: "team",
     modelName: 'Team',
   });
   return Team;
