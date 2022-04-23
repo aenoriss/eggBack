@@ -43,7 +43,4 @@ app.use(function(err, req, res, next) {
 //Database Init
 sequelize.sync();
 
-const red = await Team.create({ name: "blue" });
-
-
 module.exports = app;

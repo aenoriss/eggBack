@@ -15,7 +15,10 @@ module.exports = (sequelize, DataTypes) => {
   }
   Team.init({
     name: DataTypes.STRING,
-    points: DataTypes.INTEGER
+    points: {
+      type: DataTypes.INTEGER,
+      default: 0,
+    }
   }, {
     sequelize,
     tableName: "team",
