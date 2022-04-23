@@ -6,7 +6,7 @@ const Team  = require("../models/team")
 router.get('/', async function(req, res, next) {
   console.log("SUCCESS")
   const teams = await Team.findAll();
-  res.send('respond with a resource', teams);
+  return res.send('respond with a resource', teams);
 });
 
 module.exports = router;
