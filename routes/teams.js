@@ -3,10 +3,13 @@ var router = express.Router();
 const Team  = require("../models/team")
 
 /* GET users listing. */
-router.get('/', async function(req, res, next) {
-  console.log("SUCCESS")
-  const teams = await Team.findAll();
-  return res.send('respond with a resource', teams);
+router.get('/', async (req, res, next) => {
+  try{
+    const teams = await Team.findAll();
+    return res.json(teams);
+  } catch {
+    return res.status(500).json(err);
+  }
 });
 
 module.exports = router;
