@@ -13,7 +13,9 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "pg": "^8.7.3",
+    "psql": "0.0.1",
     "sequelize": "^6.19.0",
-    "sequelize-cli": "^6.4.1"
+    "sequelize-cli": "^6.4.1",
+    "socket.io": "^4.5.0"
   }
 }
