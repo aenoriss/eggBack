@@ -11,7 +11,7 @@ const changeColorRouter = require('./routes/changeColor');
 
 const io = require("socket.io")(8080, {
   cors: {
-    origin: ["https://egg-front.vercel.app/"]
+    origin: '*',
   }
 });
 io.on("connection", socket => {
