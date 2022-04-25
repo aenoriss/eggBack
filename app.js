@@ -9,16 +9,6 @@ const usersRouter = require('./routes/teams');
 const triggersRouter = require('./routes/triggers');
 const changeColorRouter = require('./routes/changeColor');
 
-const io = require("socket.io")(3000, {
-  cors: {
-    origin: ["https://egg-front.vercel.app:8080"],
-  }
-});
-
-io.on("connection", socket => {
-  console.log(socket.id);
-})
-
 const { sequelize } = require('./models');
 const Team  = require("./models/team")
 const Trigger  = require("./models/trigger")

@@ -77,6 +77,16 @@ function onError(error) {
   }
 }
 
+const io = require('socket.io')(server, {
+  cors: {
+      origin: '*',
+  }
+});
+
+io.on("connection", socket => {
+  console.log(socket.id);
+})
+
 /**
  * Event listener for HTTP server "listening" event.
  */
