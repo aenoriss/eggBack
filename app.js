@@ -18,8 +18,6 @@ io.on("connection", socket => {
   console.log(socket.id);
 })
 
-alert("lol");
-
 const { sequelize } = require('./models');
 const Team  = require("./models/team")
 const Trigger  = require("./models/trigger")
