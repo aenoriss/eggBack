@@ -97,10 +97,14 @@ io.on("connection", socket => {
     }
   })
 
-  socket.on("updateEgg", async (data) => {
+  socket.on("updateEgg", async (data, cb) => {
     try {
       console.log(data)
-      // const trigger = await Trigger.update(data);
+      const trigger = await Trigger.update(
+        {taken: false},
+        {where: {id: data}}
+      );
+      cb(trigger)
       // console.log("TRIGGER", trigger)
       // cb({ trigger });
 
