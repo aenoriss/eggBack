@@ -8,6 +8,8 @@ var app = require('../app');
 var debug = require('debug')('socketexample:server');
 var http = require('http');
 
+const Trigger = require("../models/trigger")
+
 /**
  * Get port from environment and store in Express.
  */
