@@ -101,10 +101,10 @@ io.on("connection", socket => {
     try {
       console.log(data)
       const trigger = await Trigger.update(
-        {taken: false},
+        {taken: true},
         {where: {id: data}}
       );
-      cb(trigger)
+      cb({trigger})
       // console.log("TRIGGER", trigger)
       // cb({ trigger });
 
