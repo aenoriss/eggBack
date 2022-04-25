@@ -88,9 +88,14 @@ const io = require("socket.io")(server, {
 io.on("connection", socket => {
   console.log(socket.id);
   socket.on("eggStatus", async (filler, cb) => {
-    const trigger = await Trigger.findAll();
-    console.log("TRIGGER", trigger)
-    cb("SUCCESS", {trigger});
+    try{
+      const trigger = await Trigger.findAll();
+      console.log("TRIGGER", trigger)
+      cb({trigger});
+    } catch(err){
+      cb("FAILURE");
+    }
+    
   })
 })
 
