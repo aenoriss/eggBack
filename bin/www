@@ -85,9 +85,9 @@ const io = require("socket.io")(server, {
 
 io.on("connection", socket => {
   console.log(socket.id);
-  setInterval(() => {
-    socket.emit("ping", Math.round(Math.random() * 3));
-  }, 1000)
+  socket.on("eggStatus", (filler, cb) => {
+    cb("SUCCESS");
+  })
 })
 
 /**
