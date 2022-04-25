@@ -99,8 +99,11 @@ io.on("connection", socket => {
 
   socket.on("updateEgg", async (data) => {
     try {
-      const trigger = await Trigger.update(data);
-      console.log("TRIGGER", trigger)
+      console.log(data)
+      // const trigger = await Trigger.update(data);
+      // console.log("TRIGGER", trigger)
+      // cb({ trigger });
+
     } catch (err) {
       console.log("FAILURE")
     }
