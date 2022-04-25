@@ -89,7 +89,7 @@ io.on("connection", socket => {
   console.log(socket.id);
   socket.on("eggStatus", async (filler, cb) => {
     const trigger = await Trigger.findAll();
-    cb("SUCCESS", trigger);
+    cb("SUCCESS", trigger.json());
   })
 })
 
