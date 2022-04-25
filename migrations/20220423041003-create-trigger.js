@@ -8,9 +8,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      egg: {
-        type: Sequelize.INTEGER
-      },
       taken: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
