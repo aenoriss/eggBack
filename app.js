@@ -9,7 +9,7 @@ const usersRouter = require('./routes/teams');
 const triggersRouter = require('./routes/triggers');
 const changeColorRouter = require('./routes/changeColor');
 
-const io = require("socket.io")(3000, {
+const io = require("socket.io")(8080, {
   cors: {
     origin: ["https://egg-front.vercel.app/"]
   }
