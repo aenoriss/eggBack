@@ -17,9 +17,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Trigger.init({
-    egg: {
-      type: DataTypes.INTEGER
-    },
     taken: {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
