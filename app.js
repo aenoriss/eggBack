@@ -11,13 +11,14 @@ const changeColorRouter = require('./routes/changeColor');
 
 const io = require("socket.io")(3000, {
   cors: {
-    origin: ["https://localhost:8080/"]
+    origin: ["https://egg-front.vercel.app/"]
   }
 });
 io.on("connection", socket => {
   console.log(socket.id);
 })
 
+alert("lol");
 
 const { sequelize } = require('./models');
 const Team  = require("./models/team")
