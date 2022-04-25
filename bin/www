@@ -81,7 +81,7 @@ function onError(error) {
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: ["https://egg-front.vercel.app"],
+    origin: ["https://egg-front-beta.vercel.app/"],
   }
 });
 
