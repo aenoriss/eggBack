@@ -77,9 +77,9 @@ function onError(error) {
   }
 }
 
-const io = require('socket.io')(server, {
+const io = require("socket.io")(server, {
   cors: {
-      origin: '*',
+    origin: ["https://egg-front.vercel.app"],
   }
 });
 
