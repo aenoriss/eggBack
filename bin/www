@@ -112,12 +112,12 @@ io.on("connection", socket => {
       console.log("FAILURE")
     }
   })
+})
 
-// setInterval( () => {
-//   const trigger = await Trigger.findAll();
-//   socket.emit("eggOverview", trigger)
-// } , 1000 )
-
+setInterval( () => {
+  const trigger = await Trigger.findAll();
+  socket.emit("eggOverview", trigger)
+} , 1000 )
 
 /**git
  * Event listener for HTTP server "listening" event.
