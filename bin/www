@@ -81,10 +81,7 @@ function onError(error) {
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "http://localhost:8080",
-    methods: ["GET", "POST"],
-    credentials: true
-
+    origin: "*",
   }
 });
 
@@ -117,10 +114,6 @@ io.on("connection", socket => {
   })
 })
 
-setInterval( () => {
-  const trigger = await Trigger.findAll();
-  socket.emit("eggOverview", trigger)
-} , 1000 )
 
 /**git
  * Event listener for HTTP server "listening" event.
