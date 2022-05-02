@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: false,
     },
     teamId: {
-      allowNull: false,
+      allowNull: true,
       type: DataTypes.DATE,
     },
   }, {
